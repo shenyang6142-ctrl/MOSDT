@@ -5,12 +5,6 @@ function [mt,failrate,c] = mian(m,n)
         M=createM(20);
         B=createB(i);          
         cloud=createCloud(1);
-        M1=M;
-        M2=M;
-        B1=B;
-        B2=B;
-        cloud1=cloud;
-        cloud2=cloud;
         B=resort(B);
         [B,M,cloud]=Algorithm1(B,M,cloud);
         [mt((i-m)/40+1),failrate((i-m)/40+1),c((i-m)/40+1),cloud] = result(B,M,cloud);
@@ -657,3 +651,4 @@ function Cloud = createCloud(a)
 end
 
 %%%-------------------------------------------------------------------------------------------------%%%
+
